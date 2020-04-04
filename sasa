@@ -1,0 +1,18 @@
+sudo service redis-server start redis-cli
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
+git clone https://github.com/Tarfand-pro/Self-Bot.git -b supergroups
+cd Self-Bot
+chmod +x launch.sh
+./launch.sh install
+cd .luarocks/bin
+./luarocks-5.2 install luafilesystem
+./luarocks-5.2 install lub
+./luarocks-5.2 install luaexpat
+./luarocks-5.2 install serpent
+./luarocks-5.2 install feedparser
+./luarocks-5.2 install redis-lua
+./luarocks-5.2 install fakeredis
+cd ../..
+./launch.sh
